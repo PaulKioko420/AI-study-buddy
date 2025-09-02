@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Study Buddy - Flashcard Generator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>AI Study Buddy</h1>
+            <p>Transform your study notes into interactive flashcards with AI</p>
+        </header>
+
+        <div class="main-content">
+            <div class="input-section">
+                <h2>Paste Your Study Notes</h2>
+                <textarea id="study-notes" placeholder="Paste your study notes here..."></textarea>
+                <button id="generate-btn" class="btn-primary">
+                    <i class="fas fa-robot"></i> Generate Flashcards
+                </button>
+            </div>
+
+            <div class="flashcards-section">
+                <h2>Your Flashcards</h2>
+                <div id="flashcards-container" class="flashcards-container">
+                    <div class="placeholder">
+                        <i class="fas fa-lightbulb"></i>
+                        <p>Your flashcards will appear here after generation</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="history-section">
+            <h2>Previously Saved Flashcards</h2>
+            <button id="load-history" class="btn-secondary">
+                <i class="fas fa-history"></i> Load Saved Flashcards
+            </button>
+            <div id="history-container" class="history-container"></div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
